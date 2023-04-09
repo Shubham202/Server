@@ -11,6 +11,7 @@ const authRoutes = require('./routes/auth');
 
 // Connecting to MongoDB
 mongoose.connect(process.env.DATABASE_LOCAL, { useNewUrlParser: true });
+mongoose.set("strictQuery", true);
 
 const app = express();
 const port = process.env.PORT || 5000;
